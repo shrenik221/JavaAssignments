@@ -1,0 +1,20 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*; 
+public class Main
+{
+	public static void main(String[] args) {
+	   
+	    List<String> pc_games = new ArrayList<String>();
+        pc_games.add("Farcry");  
+        pc_games.add("PUBG");  
+        pc_games.add("Rise of nations");  
+        pc_games.add("Grand theft Auto");  
+        pc_games.forEach(games -> System.out.println(games));  
+	}
+}

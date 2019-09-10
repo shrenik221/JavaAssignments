@@ -1,0 +1,32 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+class InvalidAgeException extends Exception{
+    InvalidAgeException(String s){
+        super(s);
+    }
+}
+public class Main
+{
+    static void age_validate(int age) throws InvalidAgeException{
+        if(age<18){
+            System.out.println("Invalid age...can't vote");
+        }else{
+            System.out.println("Valid age");
+        }
+        
+    }
+	public static void main(String[] args) {
+		try{
+		    age_validate(11);
+		}catch(Exception e){
+		    System.out.println("Exception occured " + e);
+		}
+		System.out.println("Main class");
+	}
+}

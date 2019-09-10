@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1_learner;
+
+/**
+ *
+ * @author Pawan Kumar
+ */
+interface Basic{
+    void print();
+    void print_int();
+}
+class InterfaceImplement implements Basic{
+    public void print(){
+    System.out.println("I'm here and implementing");
+    }
+    public void print_int(){
+        System.out.println("Trying to print");
+    }
+}
+class InterfaceImplement2  implements Basic{
+    public void print(){
+        System.err.println("I'm in second class");
+    }
+    public void print_int(){
+        System.err.println("Trying to count from class 2");
+            }
+}
+class InterfaceImplement3 extends InterfaceImplement {
+   public void print(){
+    System.out.println("I'm here in third class");
+    }
+    public void print_int(){
+        System.out.println("Trying to print in third");
+    }
+}
+public class InterfaceExample {
+    public static void main(String[] args) {
+        InterfaceImplement obj = new InterfaceImplement();
+        InterfaceImplement2 obj1= new InterfaceImplement2();
+        InterfaceImplement3 obj2= new InterfaceImplement3();
+        obj.print();
+        obj.print_int();
+        obj1.print();
+        obj1.print_int();
+        obj2.print();
+        obj2.print_int();
+    }
+}

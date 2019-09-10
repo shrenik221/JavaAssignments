@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1_learner;
+
+/**
+ *
+ * @author Pawan Kumar
+ */
+abstract class Instance_one{
+  abstract void print();
+  abstract void something();
+}
+class Instance_two extends Instance_one{
+
+    @Override
+    void print() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.err.println("Implemented in main class");
+    }
+
+    @Override
+    void something() {
+  //      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Second method in main ");
+    }
+
+
+}
+public class AbstractClassExample {
+    public static void main(String[] args) {
+        Instance_two obj = new Instance_two();
+        obj.print();
+        obj.something();
+    }
+}

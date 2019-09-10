@@ -1,0 +1,52 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the plusMinus function below.
+    static void plusMinus(int[] arr) {
+        int size = arr.length;
+        double positive_num = 0;
+        double negative_num = 0;
+        double count_zero = 0;
+        for(int i=0;i<size;i++){
+            if(arr[i]>0){
+                positive_num++;
+            }else if(arr[i]<0){
+                negative_num++;
+            }else
+             count_zero++;
+        }
+        DecimalFormat numberFormat = new DecimalFormat("#.000000"); 
+        System.out.println(numberFormat.format(positive_num/size));
+        System.out.println(numberFormat.format(negative_num/size));
+        System.out.println(numberFormat.format(count_zero/size));
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int[] arr = new int[n];
+
+        String[] arrItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < n; i++) {
+            int arrItem = Integer.parseInt(arrItems[i]);
+            arr[i] = arrItem;
+        }
+
+        plusMinus(arr);
+
+        scanner.close();
+    }
+}

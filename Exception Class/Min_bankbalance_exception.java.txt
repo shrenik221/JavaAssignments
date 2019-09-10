@@ -1,0 +1,40 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+class BankbalanceException extends Exception{
+    static long min_balance =50;
+    BankbalanceException(){
+        
+    }
+    BankbalanceException(String s){
+        super(s);
+    }
+    void balance_validate(long balance) throws BankbalanceException{
+        if(balance<min_balance){
+            throw new BankbalanceException("Below minimum balance");
+        }else{
+            System.out.println("Can withdraw");
+        }
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		BankbalanceException obj = new BankbalanceException();
+		Scanner s = new Scanner(System.in);
+		long amount=s.nextInt();
+		try{
+		    obj.balance_validate(amount);
+		}catch(Exception e){
+		    System.out.println("Exception occured " + e);
+		}finally{
+		    System.out.println("Default statement");
+		}
+		System.out.println("Main class");
+	}
+}

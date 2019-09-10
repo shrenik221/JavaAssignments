@@ -1,0 +1,26 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+class Exceptionexample extends Exception{
+    public Exceptionexample(String s){
+        super(s);
+    }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	try{
+	   // int i =100/0;
+	    throw new Exceptionexample("Throw me");
+	}catch(Exceptionexample ex){
+	    System.out.println("This works too");
+	}
+	System.out.println(" this is main");
+	}
+}

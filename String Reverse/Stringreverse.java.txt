@@ -1,0 +1,26 @@
+import java.util.*;
+class Rev{
+    String base;
+    Rev(){
+        
+    }
+    String reverse(String rev){
+        String buff="";
+        for(int i=rev.length()-1;i>=0;i--){
+            buff = buff + rev.charAt(i);
+        }
+        return buff;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Rev obj = new Rev();
+		Scanner s = new Scanner(System.in);
+	           
+		System.out.println("Enter the string you want to reverse: ");
+		String first = s.readLine(); 
+        String rev=obj.reverse(first);
+        System.out.println("String after reverse :" + rev);
+	}
+}

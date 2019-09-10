@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1_learner;
+
+/**
+ *
+ * @author Pawan Kumar
+ */
+interface UI{
+    void print();
+}
+interface UI2{
+    void display();
+}
+interface UI3 extends UI,UI2{
+    void print_rrq();
+    void display_rrq();
+}
+class Implementer implements UI3{
+    
+    @Override
+    public void print_rrq() {
+        System.out.println("Extension rrq");
+    }//To change body of generated methods, choose Tools | Templates.
+    
+
+    @Override
+    public void display_rrq(){
+        System.out.println("Display rrq");
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Extension print");
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Display rrq");
+    }
+
+}
+public class InterfacesExtends {
+    public static void main(String[] args) {
+      Implementer obj = new Implementer();
+      obj.display_rrq();
+      obj.display();
+      obj.print();
+      obj.print_rrq();
+    }
+            
+}

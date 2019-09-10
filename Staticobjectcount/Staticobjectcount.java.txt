@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1_learner;
+
+/**
+ *
+ * @author Pawan Kumar
+ */
+
+class Makeup{
+
+
+    static int i = 0;
+    static int j=0;
+    public Makeup() {
+        this.j++;
+    }
+    void display(){
+        System.out.println("Total number of objects created = " + j);
+     
+    }
+}
+
+public class Staticobjectcount {
+       
+    public static void main(String[] args) {
+       Makeup m1 = new Makeup();
+       Makeup m0 = new Makeup();
+       Makeup m2 = new Makeup();
+       Makeup m3 = new Makeup();
+       Makeup m4 = new Makeup();
+       Makeup sum = new Makeup();
+       sum.display();
+    }
+      
+}

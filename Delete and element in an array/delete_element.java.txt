@@ -1,0 +1,59 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+class Rev{
+    Rev(){
+        
+    }
+    int[] data_entry(){
+      
+      Scanner obj_in = new Scanner(System.in);
+      System.out.println("Enter size of the array:");
+      int size = obj_in.nextInt();
+      int[] arr = new int[size];
+      System.out.println("Enter elements of the array:");
+      for(int i=0; i<size;i++){
+          arr[i]=obj_in.nextInt();
+      }
+      return arr;
+   }
+   int[] delete_arr(int[] arr){
+      int index=0;
+      int count=0;
+      Scanner obj_in = new Scanner(System.in);
+      System.out.println("Enter number you want to delete:");
+      int num = obj_in.nextInt();
+      int new_size = arr.length - 1;
+      int[] nw= new int[new_size];
+        for(int l=0,k=0;l<arr.length;l++){
+            if(arr[l]==num){
+                continue;
+            }
+                if(k>l){
+                break;
+            }
+            nw[k]=arr[l];
+            k++;
+        }
+     return nw;
+   }
+    void display_arr(int[] arr){
+      for(int k=0;k<arr.length;k++){
+          System.out.println(arr[k]);
+      } 
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Rev obj = new Rev();
+    	int[] arr_arg=obj.data_entry();
+		int[] nw=obj.delete_arr(arr_arg);
+		obj.display_arr(nw);
+	}
+}

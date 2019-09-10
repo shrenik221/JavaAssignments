@@ -1,0 +1,33 @@
+import java.util.*;
+class Rev{
+    
+    Rev(){
+        
+    }
+    int split_count(String some){
+        String[] arr = some.split(" ");
+        return arr.length-1; 
+    }
+    int check_uppercase(String arg){
+     int upper_count = 0;
+     String[] arr = arg.split(" ");
+     for(int j=0;j<arr.length;j++){
+             char chr = arr[j].charAt(0);
+             if(Character.isUpperCase(chr)){
+              upper_count++;   
+             }
+     }
+     return upper_count;
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Rev obj = new Rev();
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the string to count spaces and check case: ");
+		String first = s.nextLine();
+        System.out.println("The number of spaces in string :" + obj.split_count(first));
+        System.out.println("First upper case letters in string: " + obj.check_uppercase(first));
+	}
+}
